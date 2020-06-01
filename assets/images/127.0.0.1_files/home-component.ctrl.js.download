@@ -1,0 +1,19 @@
+newsApp.controller('homeController',['$scope','$location','sharedService','$rootScope',
+function($scope,$location,sharedService,$rootScope){
+    $rootScope.countryName = $rootScope.countryName ? $rootScope.countryName  : 'eg';
+    $rootScope.$watch('countryName', function (event){
+        sharedService.getTopHeadlines(event).then(res=>{
+            $scope.getNews=res.data.articles.filter((item,index)=>{
+                if(index <='4'){
+                    return item;
+                } 
+            });
+            console.log( $scope.getNews)
+            $scope.firstNews =$scope.getNews[0];
+            $scope.secondNews =$scope.getNews[1];
+            $scope.thirdNews =$scope.getNews[2];
+            $scope.fourthNews =$scope.getNews[3];
+            $scope.fiftshNews =$scope.getNews[4];
+        })
+    });
+}]);

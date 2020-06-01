@@ -1,0 +1,146 @@
+newsApp.config(
+    ['$routeProvider','$locationProvider','$stateProvider','$urlRouterProvider',
+        function($routeProvider,$locationProvider,$stateProvider,$urlRouterProvider){
+        // $urlMatcherFactoryProvider.caseInsensitive(true);
+        $urlRouterProvider.otherwise('/home')
+        $locationProvider.html5Mode(false).hashPrefix('');
+        $routeProvider.caseInsensitiveMatch = true; 
+        $stateProvider.
+        state('/',{
+            url:'/',
+            templateUrl: 'app/home-componet/home-component.html',
+            controller: 'homeController',
+            resolve:{
+                deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                    return $ocLazyLoad.load({
+                        files: [
+                            'app/home-componet/home-component.ctrl.js',
+                            'app/home-componet/home-component.js', 
+                            'app/home-componet/home-component.css',
+                            'app/shared/services/shared-service.js'
+                        ]
+                    });
+            }]
+            }
+        })
+        .state('business',{
+            url:'/business',
+            templateUrl:'app/shared/components/type-component/type-component.html',
+            controller:'typeComponentCtrl',
+            resolve:{
+                deps:['$ocLazyLoad', function ($ocLazyLoad){
+                    return $ocLazyLoad.load({
+                        files:[
+                            'app/shared/components/type-component/type-component.ctrl.js',
+                            'app/shared/components/type-component/type-component.js',
+                            'app/shared/components/type-component/type-component.css'
+                        ]
+                    })
+                }]
+            }
+
+        })
+        .state('entertainment',{
+            url:'/entertainment',
+            templateUrl:'app/shared/components/type-component/type-component.html',
+            controller:'typeComponentCtrl',
+            resolve:{
+                deps:['$ocLazyLoad', function ($ocLazyLoad){
+                    return $ocLazyLoad.load({
+                        files:[
+                            'app/shared/components/type-component/type-component.ctrl.js',
+                            'app/shared/components/type-component/type-component.js',
+                            'app/shared/components/type-component/type-component.css'
+                        ]
+                    })
+                }]
+            }
+
+        })
+        .state('health',{
+            url:'/health',
+            templateUrl:'app/shared/components/type-component/type-component.html',
+            controller:'typeComponentCtrl',
+            resolve:{
+                deps:['$ocLazyLoad', function ($ocLazyLoad){
+                    return $ocLazyLoad.load({
+                        files:[
+                            'app/shared/components/type-component/type-component.ctrl.js',
+                            'app/shared/components/type-component/type-component.js',
+                            'app/shared/components/type-component/type-component.css'
+                        ]
+                    })
+                }]
+            }
+
+        })
+        .state('science',{
+            url:'/science',
+            templateUrl:'app/shared/components/type-component/type-component.html',
+            controller:'typeComponentCtrl',
+            resolve:{
+                deps:['$ocLazyLoad', function ($ocLazyLoad){
+                    return $ocLazyLoad.load({
+                        files:[
+                            'app/shared/components/type-component/type-component.ctrl.js',
+                            'app/shared/components/type-component/type-component.js',
+                            'app/shared/components/type-component/type-component.css'
+                        ]
+                    })
+                }]
+            }
+
+        })
+        .state('sports',{
+            url:'/sports',
+            templateUrl:'app/shared/components/type-component/type-component.html',
+            controller:'typeComponentCtrl',
+            resolve:{
+                deps:['$ocLazyLoad', function ($ocLazyLoad){
+                    return $ocLazyLoad.load({
+                        files:[
+                            'app/shared/components/type-component/type-component.ctrl.js',
+                            'app/shared/components/type-component/type-component.js',
+                            'app/shared/components/type-component/type-component.css'
+                        ]
+                    })
+                }]
+            }
+
+        })
+        .state('technology',{
+            url:'/technology',
+            templateUrl:'app/shared/components/type-component/type-component.html',
+            controller:'typeComponentCtrl',
+            resolve:{
+                deps:['$ocLazyLoad', function ($ocLazyLoad){
+                    return $ocLazyLoad.load({
+                        files:[
+                            'app/shared/components/type-component/type-component.ctrl.js',
+                            'app/shared/components/type-component/type-component.js',
+                            'app/shared/components/type-component/type-component.css'
+                        ]
+                    })
+                }]
+            }
+
+        })
+        .state('weather',{
+            url:'/weather',
+            templateUrl:'app/shared/components/type-component/type-component.html',
+            controller:'typeComponentCtrl',
+            resolve:{
+                deps:['$ocLazyLoad', function ($ocLazyLoad){
+                    return $ocLazyLoad.load({
+                        files:[
+                            'app/shared/components/type-component/type-component.ctrl.js',
+                            'app/shared/components/type-component/type-component.js',
+                            'app/shared/components/type-component/type-component.css'
+                        ]
+                    })
+                }]
+            }
+
+        })
+    }])
+

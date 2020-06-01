@@ -1,0 +1,9 @@
+<h3 ng-show="vm.getCountry == 'eg' || vm.getCountry == 'ae'" style="color:#404040">العناوين</h3>
+<h3 ng-hide="vm.getCountry == 'eg' || vm.getCountry == 'ae'">Top Stories</h3>
+<div class="my-3" ng-repeat="item in vm.allTitles">
+    <a ui-sref="news({type:'topheadline',id:item.id})" class="color-link">{{item.title}}</a>
+    <div class="font-size my-1">
+        <i class="far fa-clock"></i>
+        <span class="color-span">{{item.publishedAt | date: 'd MMM yy'}}</span>
+    </div>
+</div>

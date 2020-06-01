@@ -1,0 +1,58 @@
+<section class="container my-4">
+    <div class="row">
+        <div class="col-md-12 no-padding">
+            <img ng-src="{{firstNews.urlToImage}}" class="img" alt=""/>
+            <div class="overlay"></div>
+            <a ng-click="redirectToNews('topheadline',currentCountry,firstNews)">
+                <div class="description line">
+                    <h4>{{firstNews.title}}</h4>
+                    <p>{{firstNews.description}}</p>
+                </div>
+            </a>
+        </div> 
+    </div>
+    <div class="row">
+        <div class="col-md-3 no-padding margin-box">
+            <img ng-src="{{secondNews.urlToImage}}" class="img-mini" alt=""/>
+            <div class="overlay"></div>
+            <a ng-click="redirectToNews('topheadline',currentCountry,secondNews)">
+                <div class="description line">
+                    <h5 class="header">{{secondNews.title}}</h5>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 no-padding margin-box">
+            <img ng-src="{{thirdNews.urlToImage}}" class="img-mini" alt=""/>
+            <div class="overlay"></div>
+            <a ng-click="redirectToNews('topheadline',currentCountry,thirdNews)">
+                <div class="description line">
+                    <h5 class="header">{{thirdNews.title}}</h5>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 no-padding margin-box">
+            <img ng-src="{{fourthNews.urlToImage}}" class="img-mini" alt=""/>
+            <div class="overlay"></div>
+            <a ng-click="redirectToNews('topheadline',currentCountry,fourthNews)">
+                <div class="description line">
+                    <h5 class="header">{{fourthNews.title}}</h5>
+                </div>
+            </a>
+        </div>   
+        <div class="col-md-3 no-padding margin-box">
+            <img ng-src="{{fifthhNews.urlToImage}}" class="img-mini" alt=""/>
+            <div class="overlay"></div>
+            <a ng-click="redirectToNews('topheadline',currentCountry,fifthhNews)">
+                <div class="description line">
+                    <h5 class="header">{{fifthhNews.title}}</h5>
+                </div>
+            </a>
+        </div> 
+    </div>
+</section>
+<section class="container my-4">
+    <type-component data="getBbcNews" type="type"></type-component>
+</section>
+<section class="container my-4">
+    <type-component data="sportsArticles" type="typeSports"></type-component>
+</section>

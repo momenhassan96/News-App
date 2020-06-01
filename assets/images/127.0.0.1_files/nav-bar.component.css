@@ -1,0 +1,11 @@
+
+.country-name{
+    width: 173px;
+    display: inline-block;
+}
+
+.flag-img{
+    width:21px;
+    margin-left: 25px;
+    height: 14px;
+}

@@ -1,0 +1,40 @@
+.overlay{
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+}
+.img{
+    position: relative;
+    width:100%;
+}
+
+.description{
+    position: absolute;
+    bottom: 30px;
+    width: 96%;
+    text-align: right;
+    color:#fff;
+}
+.author{
+    text-align: left;
+    margin-left: 18px;
+}
+
+.no-padding{
+    padding-right:0px !important;
+    padding-left:0px !important;
+    /* margin:5px; */
+}
+
+.stick{
+    width: 6px;
+    height: 21px;
+    background-color: red;
+    position: absolute;
+    left: 8px;
+    bottom: 1px;
+}

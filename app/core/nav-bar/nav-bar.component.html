@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light nav-bar-bg">
+    <div class="container">
+      <a class="navbar-brand links-color" ui-sref="/" >NEWS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto ">
+        <li class="nav-item active m-auto">
+          <a class="nav-link links-color" ui-sref="/">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item  m-auto">
+          <a class="nav-link links-color" ui-sref="business">Business</a>
+        </li>
+        <li class="nav-item  m-auto">
+            <a class="nav-link links-color" ui-sref="entertainment">Entertainment</a>
+        </li>
+        <li class="nav-item  m-auto">
+            <a class="nav-link links-color" ui-sref="health">Health</a>
+        </li>
+        <li class="nav-item  m-auto">
+            <a class="nav-link links-color" ui-sref="science">Science</a>
+        </li>
+        <li class="nav-item  m-auto">
+            <a class="nav-link links-color" ui-sref="sports">Sports</a>
+        </li>
+        <li class="nav-item  m-auto">
+            <a class="nav-link links-color" ui-sref="technology">Technology</a>
+        </li>
+        <li class="nav-item  m-auto">
+            <a class="nav-link links-color" ui-sref="weather">Weather</a>
+        </li>
+        <li class="nav-item dropdown">
+            <md-menu>
+                <md-button aria-label="Open menu with custom trigger" class="" ng-mouseenter="$mdMenu.open()">
+                 <span class="nav-link links-color" style="font-size: 14px !important; font-weight: 400 !important; margin-left: -12px;">
+                     Countries
+                     <span style="padding: 4px;"><i class="fas fa-sort-down"></i></span>
+                 </span>
+                </md-button>
+                <md-menu-content width="4" ng-mouseleave="$mdMenu.close()">
+                  <md-menu-item ng-repeat ="item in data">
+                    <md-button ng-click="getNewsForCountry(item.value)">
+                        <span class="country-name">{{item.countryName}}</span>
+                        <img ng-src="{{item.countryImg}}" class="flag-img"/>
+                    </md-button>
+                  </md-menu-item>
+                </md-menu-content>
+              </md-menu>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+<ui-view></ui-view>

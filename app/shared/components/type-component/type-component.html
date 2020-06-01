@@ -1,0 +1,15 @@
+<div class="header-type mb-4">
+    <div class="stick-title " ng-class="{'color-red' :vm.type == 'News' , 'color-yellow':vm.type != 'News'}"></div>
+    <h3 class="header-title" ng-click="vm.redirectToArtiacle(vm.type)">{{vm.type}}</h3>
+</div>
+
+<div class="row">
+    <div class="col-md-4" ng-repeat="item in vm.data" >
+        <div class="img-frame">
+            <img ng-src="{{item.urlToImage}}" alt="" class="img-type"/>
+            <div class="img-overlay"></div>
+        </div>
+        <h5 class="h5-style my-2">{{item.title | limition:'70'}}</h5>
+        <p class="p-style">{{item.description | limition:'97'}}</p>
+    </div>
+</div>

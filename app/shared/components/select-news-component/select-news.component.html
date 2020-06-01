@@ -1,0 +1,26 @@
+<section class="container text-direction my-3" ng-clock>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="border-bottom">
+                <h2 class="headers">{{obj.title}}</h2>
+                <span class="font-size">
+                    <i class="far fa-clock"></i>
+                    <span class="color-span margin-y">{{obj.publishedAt | date: 'd MMM yy'}}</span>
+                </span>
+            </div>
+            <div class="mb-5">
+                <img ng-src="{{obj.urlToImage}}" alt="{{obj.urlToImage}}" class="img-obj"/>
+            </div>
+            <div class="desc">
+                {{obj.description}}
+            </div>
+            <div class="my-3">
+                <a href="{{obj.url}}" target="_blank">#{{obj.author}}</a>
+            </div>
+        </div>
+        <div class="col-md-3 side">
+            <side-title></side-title>
+        </div>
+    </div>
+</section>
+

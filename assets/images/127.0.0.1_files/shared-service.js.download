@@ -1,0 +1,8 @@
+newsApp.service('sharedService',['$http',function($http){
+    let ref = this;
+
+    ref.getTopHeadlines = function(yourCountry){
+       return $http.get(`app/fake-api/top-head-line/topheadline-${yourCountry}.json`)
+    }
+}])
+

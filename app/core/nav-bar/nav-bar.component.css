@@ -1,0 +1,19 @@
+
+.country-name{
+    width: 173px;
+    display: inline-block;
+}
+
+.flag-img{
+    width:21px;
+    margin-left: 25px;
+    height: 14px;
+}
+
+.nav-bar-bg{
+    background-color: #bb1919 !important;;
+}
+
+.links-color{
+    color:#FFF !important;
+}

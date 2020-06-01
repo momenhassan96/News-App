@@ -1,0 +1,35 @@
+.m-b{
+    color:#5a5a5a;
+}
+
+/* .anchor-style:hover{
+    color:#255AA9;
+    text-decoration: solid;
+} */
+.link{
+    position: relative;
+}
+.link:hover .anchor-style{
+    color:#255AA9;
+    text-decoration: solid;
+}
+
+.link:hover{
+    cursor: pointer;
+}
+
+.font-size{
+    font-size: 14px;
+    color:#5a5a5a;
+}
+
+.time{
+    position: absolute;
+    bottom: 0;
+}
+
+.border-b{
+    border-bottom: solid 1px;
+    color:#dbdbdb;
+    margin-top: 20px;
+}
